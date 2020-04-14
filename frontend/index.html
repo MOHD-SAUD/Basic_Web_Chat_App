@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+    <style>
+        body { font: 13px Helvetica, Arial; }
+        div{background: cornsilk; padding: 3px; width: 100%; position: fixed; bottom: 0;}
+        div input { border: 2; padding: 10px; width: 90%; margin-right: .5%; bottom: 0}
+        div button { width: 4%; background: rgb(130, 224, 255); border: none; padding: 10px; bottom: 0}
+        #msglog { list-style-type: none; margin: 0; padding: 0; }
+        #msglog li { padding: 5px 10px; }
+        #msglog li:nth-child(odd) { background: #eee; }
+    </style>
+    <title>Chat APP</title>
+</head>
+<body>
+    
+    
+        <div id="login-div">
+            <input placeholder="username" type="text" id="loginbox" required>
+            <button id="loginbtn">Login</button>
+        </div>
+   
+   <p id="salutation"></p>
+    
+    
+        <div id="chat-div" style="display: none">
+            <input type="text" placeholder="new message" id="msgbox">
+            <button id="msg_send">Send</button>
+        </div>
+    
+    
+    <ul id="msglog"></ul>
+   
+</body>
+</html>
